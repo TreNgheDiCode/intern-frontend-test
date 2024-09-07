@@ -7,7 +7,6 @@ const nextConfig = {
     loader: "akamai",
     path: "",
   },
-  assetPrefix: "/",
   generateBuildId: async () => {
     return process.env.GIT_HASH;
   },
