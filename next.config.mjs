@@ -4,6 +4,9 @@ const nextConfig = {
   reactStrictMode: true,
   distDir: "./out",
   output: "export",
+  generateBuildId: async () => {
+    return process.env.GIT_HASH;
+  },
 };
 
 export default nextConfig;
