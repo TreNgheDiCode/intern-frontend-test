@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: "/intern-frontend-test",
   output: "export",
   reactStrictMode: true,
   images: {
