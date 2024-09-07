@@ -1,13 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: "/intern-test",
+  basePath: "/intern-frontend-test",
   output: "export",
   reactStrictMode: true,
-  distDir: "./out",
+  images: {
+    loader: "akamai",
+    path: "",
+  },
+  assetPrefix: "./",
   generateBuildId: async () => {
     return process.env.GIT_HASH;
   },
 };
 
-module.exports = nextConfig;
 export default nextConfig;
