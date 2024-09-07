@@ -34,8 +34,14 @@ jobs:
         with:
           static_site_generator: next
 
+      - name: Get GIT Hash
+        id: git_hash
+        run: echo "GIT_HASH=$(git rev-parse HEAD)" >> $GITHUB_ENV
+
       - name: Build with Next.js 🏗️
         run: npm run build
+        env:
+          GIT_HASH: ${{ env.GIT_HASH }} # Use the GIT_HASH environment variable
 
       - name: Upload artifact 📡
         uses: actions/upload-pages-artifact@v3
