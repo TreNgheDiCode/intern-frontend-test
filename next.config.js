@@ -6,10 +6,10 @@ const nextConfig = {
     loader: "akamai",
     path: "",
   },
-  assetPrefix: "./",
+  assetPrefix: "/",
   generateBuildId: async () => {
     return process.env.GIT_HASH;
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
