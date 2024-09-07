@@ -2,6 +2,7 @@
 const nextConfig = {
   basePath: "/intern-frontend-test",
   reactStrictMode: true,
+  distDir: "./out",
   output: "export",
 };
 
