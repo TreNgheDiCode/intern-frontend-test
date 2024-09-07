@@ -1,12 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: "/intern-frontend-test",
+  basePath: "/intern-test",
+  output: "export",
   reactStrictMode: true,
   distDir: "./out",
-  output: "export",
   generateBuildId: async () => {
     return process.env.GIT_HASH;
   },
 };
 
+module.exports = nextConfig;
 export default nextConfig;
