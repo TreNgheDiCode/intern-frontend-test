@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  basePath: "/intern-frontend-test",
+  reactStrictMode: true,
+  output: "export",
+};
 
 export default nextConfig;
